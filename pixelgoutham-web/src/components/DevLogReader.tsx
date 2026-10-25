@@ -158,7 +158,7 @@ export const DevlogReader = () => {
                     </div>
 
                     <p className="max-w-md text-xs md:text-sm text-neutral-400 leading-relaxed">
-                        No generic coding tutorials. These are real acrhitectural breakdowns, store launch numbers, and hackathon post-mortems from Mysuru.
+                        No generic coding tutorials. These are real architectural breakdowns, store launch numbers, and hackathon post-mortems from Mysuru.
                     </p>
                 </div>
 
@@ -242,6 +242,14 @@ export const DevlogReader = () => {
                                                 </>
                                             )}
                                         </button>
+                                    </div>
+                                    <div className="mt-6">
+                                        <h3 className="text-2xl md:text-3xl font-black tracking-tight leading-tight text-white">
+                                            {activeLog.title}
+                                        </h3>
+                                        <p className="mt-3 text-xs md:text-sm font-medium text-[#ff9e7d] leading-relaxed">
+                                            {activeLog.summary}
+                                        </p>
                                     </div>
 
                                     <div className="mt-8 space-y-5 border-t border-white/10 pt-8">
