@@ -3,6 +3,8 @@ import { Hero } from './components/Hero'
 import { ImpactBento } from "./components/ImpactBento";
 import { ProjectShowcase } from "./components/ProjectShowcase";
 import { DevlogReader } from "./components/DevLogReader";
+import { ContactSection } from "./components/ContactSection";
+import { Contact } from "lucide-react";
 
 export function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -36,6 +38,7 @@ export function App() {
         <ImpactBento />
         <ProjectShowcase/>
         <DevlogReader/>
+        <ContactSection/>
       </main>
     </div>
   );
