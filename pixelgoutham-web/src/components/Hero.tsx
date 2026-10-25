@@ -8,6 +8,10 @@ interface NavItem {
   count?: string;
 }
 
+interface HeroProps {
+  onOpenMenu?: () => void;
+}
+
 const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '#home' },
   { label: 'Story', href: '#story' },
@@ -16,7 +20,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const Hero = () => {
+export const Hero = ({ onOpenMenu }: HeroProps) => {
   return (
     <section
       id="home"
@@ -56,6 +60,8 @@ export const Hero = () => {
         </nav>
 
         <button
+          type="button"
+          onClick={onOpenMenu}
           aria-label="Toggle Menu"
           className="flex flex-col gap-1.5 p-2 group cursor-pointer"
         >
@@ -80,7 +86,6 @@ export const Hero = () => {
 
       {/* 4. Middle Row: Manifesto + Featured Product */}
       <div className="relative z-20 mx-auto my-auto flex w-full max-w-[1440px] flex-col md:flex-row items-start md:items-center justify-between gap-8 px-6 md:px-12">
-
         {/* Left Manifesto */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

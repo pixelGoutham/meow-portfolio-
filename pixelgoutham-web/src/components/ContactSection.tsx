@@ -5,7 +5,6 @@ import {
   Check,
   Copy,
   Send,
-  Sparkles,
 } from 'lucide-react';
 
 export const ContactSection = () => {
