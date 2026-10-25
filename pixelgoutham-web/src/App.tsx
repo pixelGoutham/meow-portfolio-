@@ -1,6 +1,7 @@
 import { useState, useEffect  } from "react";
 import { Hero } from './components/Hero'
 import { ImpactBento } from "./components/ImpactBento";
+import { ProjectShowcase } from "./components/ProjectShowcase";
 
 export function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -32,6 +33,7 @@ export function App() {
       <main>
         <Hero />
         <ImpactBento />
+        <ProjectShowcase/>
       </main>
     </div>
   );
