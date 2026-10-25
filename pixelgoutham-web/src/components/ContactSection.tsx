@@ -1,5 +1,5 @@
-import { useState, useEffect, FormEvent } from 'react';
-import {
+import { useState, useEffect } from 'react';
+import type { FormEvent } from 'react';import {
   Asterisk,
   ArrowUpRight,
   Check,
