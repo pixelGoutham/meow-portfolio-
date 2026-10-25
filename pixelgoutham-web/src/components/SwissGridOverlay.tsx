@@ -1,9 +1,7 @@
-import React from "react";
-
 const COLUMNS = [0, 1, 2, 3, 4];
 const ROWS = ['11%', '64%', '93%'];
 
-export const SwissGridOverlay: React.FC = () => {
+export const SwissGridOverlay = () => {
     return (
         <div className="pointer-events-none absolute inset-0 z-10 mx-auto max-w-[1440px] px-6 md:px-12">
             <div className="relative h-full w-full">
