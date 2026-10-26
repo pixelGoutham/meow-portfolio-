@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Terminal } from 'lucide-react';
 import { Hero } from './components/Hero';
 import { ImpactBento } from './components/ImpactBento';
 import { ProjectShowcase } from './components/ProjectShowcase';
@@ -49,17 +48,6 @@ export function App() {
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
-
-      {/* Floating Bottom-Left Terminal Launcher */}
-      <button
-        type="button"
-        onClick={() => setIsMenuOpen(true)}
-        className="group fixed bottom-5 left-5 z-40 flex items-center gap-2 bg-[#0c0c0c] text-white px-3.5 py-2 font-mono text-[11px] font-bold uppercase shadow-xl border border-white/15 hover:bg-[#e64e1b] transition-colors cursor-pointer"
-      >
-        <Terminal className="h-3.5 w-3.5 text-[#e64e1b] group-hover:text-white transition-colors" />
-        <span>TERMINAL</span>
-        <kbd className="bg-white/10 px-1.5 py-0.5 text-[10px]">CTRL+K</kbd>
-      </button>
 
       {/* Full-Screen Command & CLI Drawer */}
       <CommandDrawer
