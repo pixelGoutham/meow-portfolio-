@@ -1,75 +1,54 @@
-# React + TypeScript + Vite
+﻿# meow-portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ave Goutham the sad soul
 
-Currently, two official plugins are available:
+# Pixel Goutham | Personal Portfolio & Developer OS (`pixelgoutham.tech`)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+An editorial, Swiss-brutalist personal brand portfolio and developer workspace built from scratch for **Terra Week 1** (Hack Club). Designed with high-contrast typography, exposed hairline grids, and a production-grade component architecture.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* **Framework:** React 19 with Vite & TypeScript
+* **Styling:** Tailwind CSS (v4) with custom Swiss grid utilities
+* **Animations:** Framer Motion
+* **Icons:** Lucide React
+* **Deployment:** Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features & Architecture
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Editorial Hero Section (`Hero.tsx`):** Features a massive background watermark, custom cutout portrait layer (`potrait.png`), interactive live preview card for **PixelFocus**, and a dark-styled `Let's Talk` action card framed within a Swiss crosshair grid.
+* **Impact Bento Grid (`ImpactBento.tsx`):** Asymmetric metrics block highlighting v2.2 MS Store release, 94% board exam score, teaching track, and an interactive builder philosophy inspector.
+* **Shipped Projects Showcase (`ProjectShowcase.tsx`):** Deep-dive portfolio grid featuring live category filtering (`DESKTOP`, `AI & IPC`, `SYSTEMS & WEB`) and a 3-mode inspector (`01 Why I Built It`, `02 Architecture`, `03 Reality Check`) for projects like *PixelFocus*, *Pixel Flow*, *PixelVision*, and *scrcpy*.
+* **The Builder Logs (`DevlogReader.tsx`):** A split-pane storytelling reader containing 6 unfiltered field notes and architectural post-mortems (Microsoft Store launch lessons, Hacktoberfest Bengaluru finals, Electron IPC, and JEE bandwidth management).
+* **Swiss Brutalist Contact Section (`ContactSection.tsx`):** Minimalist layout paired with a 2x2 metadata grid (Mysuru location, active schedule), a live ticking IST clock, an interactive inquiry form, and a massive brand wordmark footer.
+* **Interactive CLI Terminal Drawer (`CommandDrawer.tsx`):** Accessible via the top navigation or a global `Ctrl + K` shortcut, featuring directory navigation and a fully interactive terminal prompt supporting commands (`whoami`, `specs`, `projects`, `jee`, `contact`, `clear`).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## Project Structure
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+```text
+pixelgoutham-web/
+├── public/
+│   ├── potrait.png
+│   └── meow.png
+├── src/
+│   ├── components/
+│   │   ├── Hero.tsx
+│   │   ├── SwissGridOverlay.tsx
+│   │   ├── ImpactBento.tsx
+│   │   ├── ProjectShowcase.tsx
+│   │   ├── DevLogReader.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── CommandDrawer.tsx
+│   ├── App.tsx
+│   ├── App.css
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+└── vite.config.ts
